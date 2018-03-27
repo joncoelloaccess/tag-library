@@ -1,0 +1,17 @@
+@import "../../shared/style-atoms";
+
+:host {
+  display: inline-block;
+}
+.paywp {
+  display: inline-block;
+  width: 100px;
+
+  &__button {
+    margin-bottom: 20px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+}

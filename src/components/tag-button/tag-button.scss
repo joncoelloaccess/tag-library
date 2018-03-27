@@ -1,0 +1,35 @@
+@import "../../shared/style-atoms";
+
+button {
+  min-width: 74px;
+  margin: 0;
+  padding: 0 12px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 30px;
+  box-shadow: none;
+  position: relative;
+  box-sizing: content-box;
+  cursor: pointer;
+
+  @each $name, $colour in $Colours {
+    &.btn__accent--#{$name} {
+      background-color: $colour;
+      border-color: darken($colour, 10);
+      color: set-text-color($colour);
+      &:active {
+        background-color: darken($colour, 5);
+      }
+      &:hover {
+        background-color: lighten($colour, 5);
+      }
+    }
+  }
+  &.btn__size {
+    &--large {
+      height: 36px;
+    }
+  }
+}

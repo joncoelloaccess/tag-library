@@ -1,0 +1,11 @@
+@import "../../shared/style-atoms";
+
+:host {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pp__tall {
+  grid-row-end: span 2;
+}

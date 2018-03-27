@@ -1,0 +1,9 @@
+@import "../../shared/style-atoms";
+
+.tpwp {
+  &__pattern {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}

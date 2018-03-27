@@ -1,0 +1,26 @@
+@import "../../shared/style-atoms";
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@supports (display: grid) {
+  @include condense {
+    :host {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 14px;
+      padding: 14px;
+      width: 100%;
+      height: calc(100% - 44px);
+    }
+  }
+  ::slotted(*) {
+    box-sizing: border-box;
+  }
+  ::slotted(.tall) {
+    grid-row-end: span 2;
+  }
+}

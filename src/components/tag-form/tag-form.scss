@@ -1,0 +1,23 @@
+@import "../../shared/style-atoms";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms";
+
+:host {
+  label {
+    @include tag-text-default;
+  }
+  .form-control {
+    border-radius: 2px;
+    border-color: $borders;
+    font-size: 13px;
+    box-shadow: none;
+    color: #7e7e81;
+    resize: vertical;
+    height: 32px;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    line-height: normal;
+    text-indent: 0;
+  }
+}

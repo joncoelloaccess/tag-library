@@ -1,0 +1,12 @@
+@import "../../shared/style-atoms";
+
+:host {
+  header {
+    background-color: $viridian-green;
+    background: linear-gradient(90deg, $viridian-green, $atoll);
+    width: 100%;
+    box-sizing: border-box;
+    color: $page-master;
+    padding: 8px 10px;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../shared/style-atoms";
+
+:host {
+  display: inline-block;
+}
+
+@each $name, $colour in $Colours {
+  &.icon--#{$name} {
+    fill: $colour;
+  }
+}

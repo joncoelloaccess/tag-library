@@ -1,0 +1,17 @@
+@import "../../shared/style-atoms";
+
+@supports (display: flex) {
+  @include condense {
+    :host {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+  ::slotted(*) {
+    flex: 1 1 40%;
+    box-sizing: border-box;
+    padding: 10px !important;
+  }
+}

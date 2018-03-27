@@ -1,0 +1,73 @@
+@import "../../shared/style-atoms";
+
+:host {
+  @include tag-text-default;
+  padding-bottom: 0;
+  & p {
+    @include tag-text-default;
+  }
+}
+:host([type="h1"]),
+:host([type="h1"]) > h1 {
+  font-size: 24px;
+  // font-size: 1.846rem;
+  font-family: $heading-font-family;
+  font-weight: 300;
+}
+:host([type="h2"]),
+:host([type="h2"]) > h2 {
+  font-size: 18px;
+  // font-size: 1.385em;
+  font-family: $heading-font-family;
+  font-weight: 300;
+}
+:host([type="h3"]),
+:host([type="h3"]) > h3 {
+  font-size: 16px;
+  // font-size: 1.231em;
+  font-family: $heading-font-family;
+  font-weight: 300;
+}
+:host([type="h4"]),
+:host([type="h4"]) > h4 {
+  font-size: 16px;
+  // font-size: 1.231em;
+  font-family: $content-font-family;
+  font-weight: 700;
+}
+:host([type="h5"]),
+:host([type="h5"]) > h5 {
+  font-size: 13px;
+  // font-size: 1em;
+  font-family: $content-font-family;
+  font-weight: 700;
+}
+:host([type="feature"]),
+:host([type="feature"]) > p {
+  font-size: 16px;
+  // font-size: 1.231em;
+  font-weight: 400;
+  font-family: Roboto;
+  padding-bottom: 0;
+}
+:host([type="small"]),
+:host([type="small"]) > p {
+  @include tag-text-small;
+  padding-bottom: 0;
+}
+:host([type="min"]),
+:host([type="min"]) > p {
+  font-size: 11px;
+  // font-size: 0.8462em;
+  font-weight: 400;
+  font-family: Roboto;
+  padding-bottom: 0;
+}
+:host([type="value"]),
+:host([type="value"]) > p {
+  font-size: 2.769em;
+  // line-height: 2.769em;
+  color: $viridian-green;
+  font-family: Lato;
+  font-weight: 300;
+}

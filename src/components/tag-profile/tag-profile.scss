@@ -1,0 +1,28 @@
+@import "../../shared/style-atoms";
+
+:host {
+  text-align: center;
+  hr {
+    border-top: 1px solid $borders;
+  }
+  .prof {
+    &__img {
+      display: inline-block;
+      height: 230px;
+      width: 230px;
+      background-color: $viridian-green;
+      border-radius: 115px;
+      position: relative;
+    }
+    &__edit {
+      position: absolute;
+      height: 44px;
+      width: 44px;
+      border-radius: 23px;
+      background-color: $viridian-green;
+      right: 0;
+      bottom: 30px;
+      cursor: pointer;
+    }
+  }
+}

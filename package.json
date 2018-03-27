@@ -1,0 +1,59 @@
+{
+  "name": "tag-library",
+  "version": "1.0.0",
+  "description": "The Access Group web component library and demo site",
+  "main": "dist/tag-library.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@stencil/core": "^0.6.4",
+    "@stencil/router": "0.0.25",
+    "bootstrap-sass": "^3.3.7",
+    "glob": "^7.1.2",
+    "js-beautify": "^1.7.5",
+    "nanoid": "^1.0.2",
+    "random-id": "0.0.2",
+    "serve": "^6.5.2",
+    "uniqid": "^4.1.1"
+  },
+  "devDependencies": {
+    "@stencil/dev-server": "latest",
+    "@stencil/sass": "0.0.2",
+    "@stencil/utils": "latest",
+    "@types/jest": "^21.1.1",
+    "bundlesize": "^0.16.0",
+    "jest": "^21.2.1",
+    "pixelmatch": "^4.0.2",
+    "tap": "^11.1.0",
+    "tslint": "^5.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/*"
+    }
+  ]
+}

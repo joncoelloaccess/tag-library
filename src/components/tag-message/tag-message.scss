@@ -1,0 +1,14 @@
+@import "../../shared/style-atoms";
+
+:host {
+  aside {
+    background-color: $highlight;
+    border-left: 2px solid $default-text;
+  }
+}
+
+@each $name, $colour in $Colours {
+  :host .aside-#{$name} {
+    border-left: 2px solid $colour;
+  }
+}

@@ -1,0 +1,119 @@
+// @font-face {
+//   font-family: "Lato";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local("Lato Regular"), local("Lato-Regular"),
+//     url(https://fonts.gstatic.com/s/lato/v14/UyBMtLsHKBKXelqf4x7VRQ.woff2)
+//       format("woff2");
+//   unicode-range: U+0100-024f, U+1-1eff, U+20a0-20ab, U+20ad-20cf, U+2c60-2c7f,
+//     U+A720-A7FF;
+// }
+
+// /* latin */
+
+// @font-face {
+//   font-family: "Lato";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local("Lato Regular"), local("Lato-Regular"),
+//     url(https://fonts.gstatic.com/s/lato/v14/1YwB1sO8YE1Lyjf12WNiUA.woff2)
+//       format("woff2");
+//   unicode-range: U+0000-00ff, U+0131, U+0152-0153, U+02c6, U+02da, U+02dc,
+//     U+2000-206f, U+2074, U+20ac, U+2212, U+2215;
+// }
+
+// @import url("https://fonts.googleapis.com/css?family=Lato:100,700|Roboto");
+
+$heading-font-family: Lato, system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+$content-font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+
+$access: #e5173f;
+$shiraz: #b00836;
+$fountain-blue: #53b8b4;
+$viridian-green: #009999;
+$atoll: #036d83;
+$midnight-blue: #373a65;
+$pink: #e37086;
+$lilac: #c688c5;
+$purple: #6c4290;
+$turquoise: #60b9cb;
+$glacier: #8bc7cb;
+$dark-green: #5c9068;
+$light-green: #5ba46c;
+$gold: #dda441;
+$orange: #f9a411;
+$yellow: #dfc24f;
+$light-brown: #a38854;
+$dark-brown: #655237;
+$title-text: #4c4f53;
+$default-text: #7e7e81;
+$subtitles: #aaaab1;
+$borders: #dbe0e5;
+$toolbars: #e9ecee;
+$highlight: #eef0f2;
+$selected: #e2ecef;
+$background: #f7f8fa;
+$page-master: #ffffff;
+$grey-1: #2c2e31;
+$grey-2: #373737;
+$grey-3: #808080;
+$grey-4: #bdbdbd;
+$grey-5: #dfdede;
+
+$Colours: (access, $access),  (shiraz, $shiraz),
+   (fountain-blue, $fountain-blue),  (viridian-green, $viridian-green),
+   (atoll, $atoll),  (midnight-blue, $midnight-blue),  (pink, $pink),
+   (lilac, $lilac),  (purple, $purple),  (turquoise, $turquoise),
+   (glacier, $glacier),  (dark-green, $dark-green),  (light-green, $light-green),
+   (gold, $gold),  (orange, $orange),  (yellow, $yellow),
+   (light-brown, $light-brown),  (dark-brown, $dark-brown),
+   (title-text, $title-text),  (default-text, $default-text),
+   (subtitles, $subtitles),  (borders, $borders),  (toolbars, $toolbars),
+   (selected, $selected),  (page-master, $page-master),  (grey-1, $grey-1),
+   (grey-2, $grey-2),  (grey-3, $grey-3),  (grey-4, $grey-4),  (grey-5, $grey-5);
+
+$background-gradient: linear-gradient(
+  to bottom right,
+  rgba(232, 236, 239, 0),
+  rgba(60, 64, 72, 0.27)
+);
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $grey-1; // Lighter backgorund, return dark color
+  } @else {
+    @return #fff; // Darker background, return light color
+  }
+}
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin condense {
+  @media screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin comfortable {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tag-text-default {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: $content-font-family;
+}
+
+@mixin tag-text-small {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Roboto;
+  padding-bottom: 0;
+}

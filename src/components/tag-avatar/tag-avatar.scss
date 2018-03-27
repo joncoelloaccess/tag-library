@@ -1,0 +1,25 @@
+:host {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  line-height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 100;
+  background-color: #8bc7cb;
+  background-size: cover;
+  background-position: 100%;
+  color: #fff;
+}
+
+.small {
+  width: 36px;
+  height: 36px;
+}

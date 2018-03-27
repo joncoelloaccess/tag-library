@@ -1,0 +1,7 @@
+@import "../../shared/style-atoms";
+
+:host {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

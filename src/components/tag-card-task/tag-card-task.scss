@@ -1,0 +1,33 @@
+:host {
+  tag-text[type="feature"] {
+    margin: 0 40px 0 14px;
+    display: block;
+  }
+  span {
+    padding: 3px 6px 8px 14px;
+    display: inline-block;
+    line-height: 23px;
+  }
+  .content {
+    margin: 0 100px 0 14px;
+    padding: 0;
+    &__items {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      font-weight: 400;
+      color: #4c4f53;
+    }
+    &__item {
+      padding: 5px 5px 0 15px;
+    }
+    &__icon {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      vertical-align: baseline;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "../../shared/style-atoms";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+  font-family: "Open Sans", "sans-serif";
+  background-color: #fff;
+  color: #444;
+}
+
+/* no grid support? */
+tag-layout-sidebar {
+  float: left;
+  width: 20%;
+}
+
+.content {
+  float: right;
+  width: 80%;
+}
+
+/* make a grid */
+:host {
+  //   max-width: 940px;
+  margin: 0 auto;
+  height: 100vh;
+  transition: all 500ms;
+}
+
+:host > * {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+// tag-navbar {
+//   grid-column: 1 / -1;
+//   /* needed for the floated layout */
+//   clear: both;
+// }
+
+@supports (display: grid) {
+  @include condense {
+    :host {
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: fit-content(60px) 1fr;
+      grid-template-rows: fit-content(45px) 1fr;
+    }
+  }
+}

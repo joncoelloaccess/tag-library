@@ -1,0 +1,35 @@
+@import "../../shared/style-atoms";
+
+:host {
+  text-align: center;
+
+  .content {
+    padding: 0 80px;
+    position: relative;
+    &__heading {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+  .info-icon {
+    width: 50px;
+  }
+
+  .content__status {
+    width: 28px;
+    position: absolute;
+    right: 15px;
+    &--warning {
+      fill: $orange;
+    }
+    &--success {
+      fill: $dark-green;
+    }
+  }
+
+  hr {
+    border-top: 1px solid $borders;
+    width: 80%;
+  }
+}
